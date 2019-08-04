@@ -60,7 +60,7 @@ func touch(wd string, conn net.Conn) {
 			fmt.Errorf("An error occurred getMtime: %s \n\n", err.Error())
 			continue
 		}
-		setMtime(filePath, mTime.Add(1))
+		setMtime(filePath, mTime.Add(time.Second*1))
 		if err != nil {
 			fmt.Errorf("An error occurred setMtime: %s \n\n", err.Error())
 			continue
